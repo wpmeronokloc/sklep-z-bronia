@@ -1,0 +1,151 @@
+* {
+  font-family: fantasy;
+}
+body {
+  background: url("desertcamo.jpg");
+  background-attachment: fixed;
+}
+header {
+  background-color: darkolivegreen;
+  font-size: 200%;
+  padding: 5px;
+  text-align: center;
+  text-shadow: 3px 1px wheat;
+  border-radius: 0px 0px 0px 0px;
+  border: 3px solid black;
+}
+header img {
+  width: 20%;
+}
+.nazwa1 {
+  width: 40%;
+  font-size: 200%;
+}
+.nazwa {
+  background: url("desertcamo.jpg");
+  border-radius: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: wheat;
+  width: 100;
+  border-radius: 0px 0px 30px 30px;
+  border: 3px solid black;
+  border-top: none;
+}
+.menu {
+  width: 20%;
+  text-align: center;
+  border-radius: 20px;
+}
+.menu:hover {
+  background-color: rgb(142, 86, 37);
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px wheat;
+  font-size: 150%;
+}
+#galeria img {
+  width: 70vw;
+  height: auto;
+  border-radius: 20px;
+}
+#galeria {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: wheat;
+  font-size: 150%;
+  padding: 30px;
+  margin: 1vw;
+  -webkit-text-stroke: 1px black;
+  background: url("tlo.jpg");
+  background-attachment: fixed;
+  padding-bottom: 40px;
+}
+#galeria b {
+  font-size: 250%;
+  margin-bottom: 2%;
+}
+.galeriamain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.galeriamain button {
+  border: none;
+  background-color: rgb(118, 117, 117, 0.7);
+  font-size: 150%;
+  text-align: center;
+  margin: 5px;
+}
+footer {
+  background-color: darkolivegreen;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+#popularne {
+  background-color: wheat;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1vw;
+}
+.kontener1,
+.kontener2,
+.kontener3,
+.kontener4 {
+  width: 40vw;
+  height: 20vw;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+#popularne img {
+  width: 50%;
+}
+#popularne p {
+  width: 50%;
+  font-size: 200%;
+}
+#popularne img:hover {
+  animation: skala 0.5s ease;
+}
+@keyframes skala {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+.popularnenapis {
+  text-align: center;
+  font-size: 250%;
+  -webkit-text-stroke: 1px white;
+  background-color: wheat;
+  border-radius: 10px;
+  width: fit-content;
+  justify-self: center;
+}
