@@ -1,0 +1,87 @@
+* {
+  font-family: fantasy;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: gray;
+  justify-items: center;
+  align-items: center;
+  height: 4vw;
+}
+#logo {
+  font-size: 4vw;
+  text-shadow: 3px 1px wheat;
+  width: 50%;
+  padding-left: 10vw;
+}
+#logo img {
+  width: 10%;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: center;
+  align-content: space-evenly;
+}
+nav img {
+  width: 2vw;
+}
+#nav_element {
+  display: flex;
+}
+.nav_element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw;
+  font-size: 1vw;
+}
+.koszyk_wartosc {
+  font-size: 2vw;
+}
+.menu {
+  width: 30vw;
+  display: flex;
+  align-items: center;
+}
+.dropbtn {
+  background-color: gray;
+  border: none;
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px wheat;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 11vw;
+  height: 4vw;
+}
+.dropbtn img {
+  width: 4vw;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: darkgray;
+  width: 100%;
+  text-shadow: 1px 1px wheat;
+  font-size: 1.5vw;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: wheat;
+}
+.dropdown-content p:hover {
+  background-color: gray;
+}
