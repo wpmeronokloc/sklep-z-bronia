@@ -1,0 +1,45 @@
+* {
+  font-family: fantasy;
+}
+#nowosc_napis {
+  background-color: wheat;
+  text-align: center;
+  margin: 5vw 5vw 1vw 5vw;
+  font-size: 5vw;
+  text-shadow: 0.4vw 0.4vw white;
+}
+#nowosci {
+  background-color: wheat;
+  width: auto;
+  margin: 0vw 5vw 1vw 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 1vw 1vw 2vw 1vw;
+  flex-wrap: wrap;
+}
+#nowosci img {
+  width: 16vw;
+}
+/* .nowosc:hover {
+  animation: skala11 0.5s ease forwards;
+  border: 0.3vw solid gray;
+} */
+.nowosc {
+  width: 18vw;
+  background-color: white;
+  margin: 1vw 0vw 0vw 1vw;
+  padding: 1vw;
+  display: inline-block;
+  transform-origin: center d;
+}
+.nowosc_nazwa {
+  height: 4vw;
+  font-size: 2vw;
+}
+.nowosc_cena {
+  font-size: 3vw;
+  margin-bottom: 1vw;
+  text-shadow: 0.2vw 0.2vw wheat;
+}

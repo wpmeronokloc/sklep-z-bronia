@@ -1,0 +1,274 @@
+* {
+  font-family: fantasy;
+}
+body {
+  background: url("img/desertcamo.jpg");
+  background-attachment: fixed;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: darkolivegreen;
+  justify-items: center;
+  align-items: center;
+  height: 4vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+#logo {
+  font-size: 4vw;
+  text-shadow: 3px 1px wheat;
+  width: 50%;
+  padding-left: 10vw;
+}
+#logo img {
+  width: 10%;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: center;
+  align-content: space-evenly;
+}
+nav img {
+  width: 2vw;
+}
+#nav_element {
+  display: flex;
+}
+.nav_element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw;
+  font-size: 1vw;
+}
+.koszyk_wartosc {
+  font-size: 2vw;
+}
+.menu {
+  width: 30vw;
+  display: flex;
+  align-items: center;
+}
+.dropbtn {
+  background-color: darkolivegreen;
+  border: none;
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px wheat;
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 11vw;
+  height: 4vw;
+}
+.dropbtn img {
+  width: 4vw;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: olive;
+  width: 100%;
+  text-shadow: 1px 1px wheat;
+  font-size: 1.5vw;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: olive;
+}
+.dropdown-content a:hover {
+  background-color: darkolivegreen;
+}
+.dropdown-content a {
+  display: block;
+  padding: 0.5vw 0.5vw 0.5vw 1vw;
+}
+main {
+  padding-top: 4vw;
+}
+.galeriashow img {
+  width: 60vw;
+  height: auto;
+  border-radius: 20px;
+}
+#galeria {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: wheat;
+  font-size: 2vw;
+  margin: 1vw 0vw 1vw 0vw;
+  -webkit-text-stroke: 1px black;
+  background: url("img/tlo.jpg");
+  background-attachment: fixed;
+  padding-bottom: 4vw;
+}
+#galeria b {
+  font-size: 4vw;
+  margin-bottom: 0.5vw;
+}
+.galeriashow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.galeriamain {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+#galeriatlo {
+  position: absolute;
+  width: 100%;
+}
+footer {
+  background-color: darkolivegreen;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5vw;
+}
+
+#popularne {
+  background-color: wheat;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1vw 5vw 0vw 5vw;
+}
+.kontener {
+  width: 36vw;
+  height: 18vw;
+  text-align: center;
+  margin: 0.5vw;
+  display: flex;
+  background-color: whitesmoke;
+}
+.kontener_text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.kontener_text img {
+  justify-self: center;
+  position: absolute;
+  opacity: 0.2;
+  width: 80%;
+}
+.kontener_img {
+  width: 50%;
+}
+#popularne p {
+  font-size: 3vw;
+  -webkit-text-stroke: 0.1vw whitesmoke;
+}
+.kontener_text img:hover {
+  animation: skala12 0.5s ease forwards;
+}
+@keyframes skala12 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+@keyframes skala11 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+.popularnenapis {
+  background-color: wheat;
+  text-align: center;
+  margin: 5vw 5vw 1vw 5%;
+  font-size: 5vw;
+  text-shadow: 0.4vw 0.4vw white;
+}
+#nowosc_napis {
+  background-color: wheat;
+  text-align: center;
+  margin: 5vw 5vw 1vw 5vw;
+  font-size: 5vw;
+  text-shadow: 0.4vw 0.4vw white;
+}
+#nowosci {
+  background-color: wheat;
+  width: auto;
+  margin: 0vw 5vw 1vw 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 1vw 2vw 2vw 2vw;
+  flex-wrap: wrap;
+}
+#nowosci img {
+  width: 16vw;
+}
+.nowosc img:hover {
+  animation: skala11 0.5s ease forwards;
+  border: 0.3vw solid gray;
+}
+.nowosc {
+  width: 18vw;
+  background-color: white;
+  margin: 1vw 0vw 0vw 1vw;
+  padding: 1vw;
+  display: inline-block;
+  transform-origin: center;
+}
+.nowosc_nazwa {
+  height: 4vw;
+  font-size: 2vw;
+}
+.nowosc_opis {
+  height: 1vw;
+  font-size: 1vw;
+}
+.nowosc_cena {
+  font-size: 3vw;
+  margin-bottom: 1vw;
+  text-shadow: 0.2vw 0.2vw wheat;
+}
+.nowosc button {
+  font-size: 1.5vw;
+}
+.do_koszyka {
+  width: 16vw;
+  font-size: 1.5vw;
+  padding: 0.5vw;
+}
