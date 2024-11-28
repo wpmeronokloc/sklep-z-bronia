@@ -1,10 +1,12 @@
 * {
   font-family: fantasy;
 }
+
 body {
   background: url("img/desertcamo.jpg");
   background-attachment: fixed;
 }
+
 header {
   display: flex;
   flex-direction: row;
@@ -18,19 +20,23 @@ header {
   z-index: 1000;
   width: 100%;
 }
+
 header a {
   text-decoration: none;
   color: black;
 }
+
 #logo {
   font-size: 4vw;
   text-shadow: 3px 1px wheat;
   width: 50%;
   padding-left: 10vw;
 }
+
 #logo img {
   width: 10%;
 }
+
 nav {
   display: flex;
   flex-direction: row;
@@ -38,13 +44,16 @@ nav {
   justify-content: center;
   align-content: space-evenly;
 }
+
 nav img {
   width: 2vw;
 }
+
 #nav_element {
   display: flex;
   flex-direction: row;
 }
+
 .nav_element {
   display: flex;
   flex-direction: column;
@@ -53,6 +62,7 @@ nav img {
   margin: 1vw;
   font-size: 1vw;
 }
+
 .koszyk_wartosc {
   font-size: 2vw;
   flex-shrink: 0;
@@ -60,11 +70,13 @@ nav img {
   min-width: 7vw;
   max-width: 7vw;
 }
+
 .menu {
   width: 30vw;
   display: flex;
   align-items: center;
 }
+
 .dropbtn {
   background-color: darkolivegreen;
   border: none;
@@ -79,13 +91,16 @@ nav img {
   width: 11vw;
   height: 4vw;
 }
+
 .dropbtn img {
   width: 4vw;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -94,76 +109,99 @@ nav img {
   text-shadow: 1px 1px wheat;
   font-size: 1.5vw;
 }
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
 .dropdown:hover .dropbtn {
   background-color: olive;
 }
+
 .dropdown-content a:hover {
   background-color: darkolivegreen;
 }
+
 .dropdown-content a {
   display: block;
   padding: 0.5vw 0.5vw 0.5vw 1vw;
 }
-#nowosc_napis {
-  background-color: wheat;
-  text-align: center;
-  margin: 5vw 5vw 1vw 5vw;
-  font-size: 5vw;
-  text-shadow: 0.4vw 0.4vw white;
-}
-#nowosci {
-  background-color: wheat;
-  width: auto;
-  margin: 0vw 5vw 1vw 5vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  text-align: center;
-  padding: 1vw 5vw 2vw 5vw;
-  flex-wrap: wrap;
-}
-#nowosci img {
-  width: 16vw;
-}
-/* .nowosc:hover {
-  animation: skala11 0.5s ease forwards;
-  border: 0.3vw solid gray;
-} */
-.nowosc {
-  width: 18vw;
-  background-color: white;
-  padding-bottom: 1vw;
-  margin-bottom: 1vw;
-  display: inline-block;
-  transform-origin: center;
-}
-.nowosc_nazwa {
-  height: 4vw;
-  font-size: 2vw;
-}
-.nowosc_opis {
-  height: 1vw;
-  font-size: 1vw;
-}
-.nowosc_cena {
-  font-size: 3vw;
-  margin-bottom: 1vw;
-  text-shadow: 0.2vw 0.2vw wheat;
-}
-.nowosc button {
-  font-size: 1.5vw;
-}
+
 footer {
   background-color: darkolivegreen;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 footer a {
   text-decoration: none;
   color: black;
   font-size: 1.5vw;
+}
+
+#koszyk_main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-evenly;
+}
+
+#koszyk_zawartosc {
+  background-color: wheat;
+  width: 60%;
+  height: 40vw;
+  margin: 1vw 2vw 2vw 2vw;
+}
+
+#koszyk_podsumowanie {
+  background-color: wheat;
+  width: 30%;
+  height: 40vw;
+  margin: 1vw 2vw 2vw 2vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.napis {
+  background-color: wheat;
+  margin: 5vw 2vw 0vw 2vw;
+  font-size: 4vw;
+}
+
+#napisy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-evenly;
+  text-align: center;
+}
+
+.koszyk_zawartosc_napis {
+  width: 60%;
+}
+
+.koszyk_podsumowanie_napis {
+  width: 30%;
+}
+
+.koszyk_element img {
+  height: 6vw;
+}
+
+.koszyk_element {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw;
+  height: 7vw;
+  background-color: gray;
+  margin: 1vw;
+  text-align: center;
+
+}
+
+.koszyk_czesc {
+  width: 20%;
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="bron.css" />
     <?php
     $conn = new mysqli("localhost", "root", "", "sklepbron")
-    ?>
+        ?>
 </head>
 
 <body>
@@ -52,7 +52,7 @@
         </nav>
     </header>
     <main>
-        <section id="nowosc_napis">Broń</section>
+        <section id="nowosc_napis">Amunicja</section>
         <section id="nowosci">
             <?php
             $sql = "SELECT id, nazwa, opis, cena, zdjecie FROM bron;";
@@ -60,7 +60,7 @@
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo
-                    "<div class='nowosc' id='nowosc" . $row['id'] . "'>  
+                        "<div class='nowosc' id='nowosc" . $row['id'] . "'>  
                          <img src='img/" . $row['zdjecie'] . ".jpg' alt='' />
                          <p class='nowosc_nazwa'>" . $row['nazwa'] . "</p>
                          <p class='nowosc_opis'>" . $row['opis'] . "</p>
@@ -89,6 +89,7 @@
             </a>
         </div>
     </footer>
+
 </body>
 <script src="bron.js"></script>
 

@@ -16,6 +16,7 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
+  width: 100%;
 }
 header a {
   text-decoration: none;
@@ -48,11 +49,16 @@ nav img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
   margin: 1vw;
   font-size: 1vw;
 }
 .koszyk_wartosc {
   font-size: 2vw;
+  flex-shrink: 0;
+  text-align: center;
+  min-width: 7vw;
+  max-width: 7vw;
 }
 .menu {
   width: 30vw;
@@ -233,7 +239,7 @@ footer a {
   flex-direction: row;
   justify-content: space-evenly;
   text-align: center;
-  padding: 1vw 2vw 2vw 2vw;
+  padding: 1vw 5vw 2vw 5vw;
   flex-wrap: wrap;
 }
 #nowosci img {
@@ -246,8 +252,7 @@ footer a {
 .nowosc {
   width: 18vw;
   background-color: white;
-  margin: 1vw 0vw 0vw 1vw;
-  padding: 1vw;
+  padding-bottom: 1vw;
   display: inline-block;
   transform-origin: center;
 }

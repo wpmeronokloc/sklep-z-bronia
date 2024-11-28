@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Broń</title>
-    <link rel="stylesheet" href="bron.css" />
+    <link rel="stylesheet" href="koszyk.css" />
     <?php
     $conn = new mysqli("localhost", "root", "", "sklepbron")
     ?>
@@ -52,24 +52,36 @@
         </nav>
     </header>
     <main>
-        <section id="nowosc_napis">Broń</section>
-        <section id="nowosci">
-            <?php
-            $sql = "SELECT id, nazwa, opis, cena, zdjecie FROM bron;";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo
-                    "<div class='nowosc' id='nowosc" . $row['id'] . "'>  
-                         <img src='img/" . $row['zdjecie'] . ".jpg' alt='' />
-                         <p class='nowosc_nazwa'>" . $row['nazwa'] . "</p>
-                         <p class='nowosc_opis'>" . $row['opis'] . "</p>
-                         <p id='cena_id' class='nowosc_cena'>" . $row['cena'] . "</p>
-                         <button class='do_koszyka' onclick='button_do_koszyka(" . $row['cena'] . ")'>Dodaj do koszyka</button>
-                         </div>";
-                }
-            }
-            ?>
+        <section id="napisy">
+            <div class="koszyk_zawartosc_napis napis">
+                <span>Zawartośc koszyka</span>
+            </div>
+            <div class="koszyk_podsumowanie_napis napis">
+                <span>Podsumowanie</span>
+            </div>
+        </section>
+        <section id="koszyk_main">
+            <section id="koszyk_zawartosc">
+                <div class="koszyk_element">
+                    <div class="koszyk_img koszyk_czesc">
+                        <img src="img/nowosc1.jpg" alt="">
+                    </div>
+                    <div class="koszyk_nazwa  koszyk_czesc">
+                        <p>Glock 19</p>
+                    </div>
+                    <div class="koszyk_opis  koszyk_czesc">
+                        <p>Pistolet automatyczny</p>
+                    </div>
+                    <div class="koszyk_cena  koszyk_czesc">
+                        <p>899zł</p>
+                    </div>
+                </div>
+            </section>
+            <section id="koszyk_podsumowanie">
+                <p>Łączna wartość koszyka:</p>
+                <p id="koszyk_podsumowanie_wartosc"></p>
+                <button id="button_koszyk_reset" onclick="koszyk_reset()">Resetuj koszyk</button>
+            </section>
         </section>
     </main>
     <footer>
@@ -90,6 +102,6 @@
         </div>
     </footer>
 </body>
-<script src="bron.js"></script>
+<script src="koszyk.js"></script>
 
 </html>

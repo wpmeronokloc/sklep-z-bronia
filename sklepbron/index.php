@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styl.css" />
     <?php
     $conn = new mysqli("localhost", "root", "", "sklepbron")
-        ?>
+    ?>
 
 </head>
 
@@ -28,8 +28,8 @@
                     </button>
                     <div class="dropdown-content">
                         <a href="bron.php">Broń</a>
-                        <a href="amunicja.html">Amunicja</a>
-                        <a href="akcesoria.html">Akcesoria</a>
+                        <a href="amunicja.php">Amunicja</a>
+                        <a href="akcesoria.php">Akcesoria</a>
                     </div>
                 </div>
             </div>
@@ -40,12 +40,14 @@
                         <span>Zaloguj</span>
                     </a>
                 </div>
-                <div class="koszyk nav_element">
-                    <img src="img/koszyk.png" alt="" />
-                    <span>Koszyk</span>
+                <div class="koszyk">
+                    <a href="koszyk.php" class="nav_element ">
+                        <img src="img/koszyk.png" alt="" />
+                        <span>Koszyk</span>
+                    </a>
                 </div>
                 <div class="koszyk_wartosc nav_element">
-                    <span>0,00zł</span>
+                    <span id="koszyk_wartosc">0,00zł</span>
                 </div>
             </section>
         </nav>
@@ -91,10 +93,10 @@
                 <img class="kontener_img" src="img/akcesoria.jpg" alt="" />
             </div>
         </section>
-        <section id="nowosc_napis"></section>
+        <section id="nowosc_napis">Nowosci</section>
         <section id="nowosci">
             <?php
-            $sql = "SELECT nazwa, opis, cena, zdjecie FROM bron;";
+            $sql = "SELECT id, nazwa, opis, cena, zdjecie FROM bron;";
             $result = $conn->query($sql);
             $count = 0; // Licznik wyników
             if ($result->num_rows > 0) {
@@ -102,13 +104,15 @@
                     if ($count >= 4) {
                         break;
                     }
-                    echo "<div class='nowosc'>  
-                    <img src='img/" . $row['zdjecie'] . ".jpg' alt='' />
-                    <p class='nowosc_nazwa'>" . $row['nazwa'] . "</p>
-                    <p class='nowosc_opis'>" . $row['opis'] . "</p>
-                    <p class='nowosc_cena'>" . $row['cena'] . "</p>
-                    <button class='do_koszyka'>Dodaj do koszyka</button>
-                  </div>";
+                    echo
+                    "<div class='nowosc' id='nowosc" . $row['id'] . "'>  
+                         <img src='img/" . $row['zdjecie'] . ".jpg' alt='' />
+                         <p class='nowosc_nazwa'>" . $row['nazwa'] . "</p>
+                         <p class='nowosc_opis'>" . $row['opis'] . "</p>
+                         <p id='cena_id' class='nowosc_cena'>" . $row['cena'] . "</p>
+                         <button class='do_koszyka' onclick='button_do_koszyka(" . $row['cena'] . ")'>Dodaj do koszyka</button>
+                         </div>";
+
                     $count++;
                 }
             }
